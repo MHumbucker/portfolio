@@ -7,6 +7,98 @@
   <meta name="description" content="Максим — Telegram-боты, автоматизация и стильные сайты для бизнеса и креаторов." />
   <title>MHumbucker</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root{
+      --accent: #39df7e;
+      --accent-strong: #98DFAA;
+      --accent-soft: rgba(183,239,196,.12);
+      --accent-line: rgba(183,239,196,.30);
+      --accent-text: #CFF8D8;
+    }
+
+    .brand-dot,
+    .pulse,
+    .button-primary,
+    .service-number,
+    .stat-value,
+    .section-head em,
+    .compact-head em,
+    .process-intro em,
+    .cta-card em,
+    .hero h1 span{
+      color: var(--accent) !important;
+    }
+
+    .brand-dot,
+    .pulse{
+      background: var(--accent) !important;
+      box-shadow: 0 0 0 6px var(--accent-soft) !important;
+    }
+
+    .button-primary{
+      background: var(--accent) !important;
+      color: #07100a !important;
+      border-color: var(--accent) !important;
+    }
+
+    .button-primary:hover{
+      background: var(--accent-strong) !important;
+      border-color: var(--accent-strong) !important;
+    }
+
+    .button-ghost:hover,
+    .nav-cta:hover,
+    .text-link:hover,
+    .social-link:hover{
+      border-color: var(--accent-line) !important;
+      color: var(--accent-text) !important;
+    }
+
+    .glow-card{
+      box-shadow: 0 0 0 1px var(--accent-line),
+                  0 22px 60px rgba(0,0,0,.24),
+                  0 0 80px rgba(183,239,196,.06) !important;
+    }
+
+    .card:hover{
+      border-color: var(--accent-line) !important;
+    }
+
+    .chat-buttons span,
+    .bot-buttons span,
+    .browser-btn,
+    .site-preview-button{
+      border-color: var(--accent-line) !important;
+    }
+
+    .process-line.active .process-dot,
+    .process-dot{
+      border-color: var(--accent) !important;
+    }
+
+    .process-line.active .process-dot{
+      background: var(--accent) !important;
+      box-shadow: 0 0 0 6px var(--accent-soft) !important;
+    }
+
+    .eyebrow{
+      border-color: var(--accent-line) !important;
+    }
+
+    .hero-copy,
+    .process-intro > p,
+    .cta-card p{
+      max-width: 700px;
+    }
+
+    @media (max-width: 760px){
+      .hero h1{
+        letter-spacing: -.04em;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -24,13 +116,13 @@
     <section class="hero wrap reveal">
       <div class="hero-main card glow-card">
         <div class="eyebrow"><span class="pulse"></span> беру новые проекты</div>
-        <h1>Снимаю рутину<br><span>с ваших плеч.</span></h1>
-        <p class="hero-copy">Создаю Telegram-ботов, автоматизацию и сайты, которые помогают бизнесу отвечать клиентам, собирать заявки и выглядеть современно.</p>
+        <h1>Собираем решения<br><span>вместо лишней рутины.</span></h1>
+        <p class="hero-copy">Вы приносите задачу — мы разбираемся в ней вместе. Я собираю Telegram-ботов, автоматизацию и сайты, которые упрощают работу и помогают клиентам быстрее получать нужное.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://t.me/mhumbucker" target="_blank" rel="noreferrer">Обсудить задачу <span>↗</span></a>
           <a class="button button-ghost" href="#cases">Посмотреть работы <span>↓</span></a>
         </div>
-        <div class="hero-meta"><span>без сложных слов</span><span>→</span><span>с понятным результатом</span></div>
+        <div class="hero-meta"><span>разбираемся вместе</span><span>→</span><span>собираем понятное решение</span></div>
       </div>
 
 <div class="hero-side">
@@ -72,7 +164,7 @@
   <div class="card side-card stat-card">
     <span class="card-label">сейчас</span>
     <div class="stat-value">24/7</div>
-    <p>Ваш клиент может получить ответ даже тогда, когда вы спите.</p>
+    <p>Бот берёт на себя типовые вопросы и не даёт вам тратить время на одну и ту же переписку.</p>
   </div>
 
 </div>
@@ -80,29 +172,29 @@
 
     <section class="section wrap reveal" id="pain">
       <div class="section-head">
-        <span class="section-kicker">знакомо?</span>
-        <h2>Пока вы заняты делом,<br><em>рутина</em> съедает время.</h2>
+        <span class="section-kicker">где можно упростить</span>
+        <h2>Типовые вопросы можно не держать<br><em>на себе.</em></h2>
       </div>
       <div class="bento pains-grid">
         <article class="card pain pain-big">
           <div class="pain-icon">↗</div>
-          <div><span class="card-label">01 · директ</span><h3>Одни и те же вопросы — снова и снова.</h3><p>«Сколько стоит?», «Где вы находитесь?», «Как записаться?» — это можно отдавать боту.</p></div>
+          <div><span class="card-label">01 · поддержка</span><h3>Одни и те же вопросы — снова и снова.</h3><p>«Сколько стоит?», «Где вы находитесь?», «Как записаться?» — бот может отвечать на это сам.</p></div>
         </article>
         <article class="card pain">
           <div class="pain-icon">◌</div>
-          <div><span class="card-label">02 · заявки</span><h3>Клиент написал ночью — и ушёл.</h3><p>Первый ответ может прийти сразу, даже когда вы не у телефона.</p></div>
+          <div><span class="card-label">02 · заявки</span><h3>Часть обращений можно обработать без вас.</h3><p>Бот уточнит данные, соберёт заявку и передаст вам только то, где действительно нужен человек.</p></div>
         </article>
         <article class="card pain">
           <div class="pain-icon">▦</div>
-          <div><span class="card-label">03 · сайт</span><h3>Ссылка есть. Впечатления — нет.</h3><p>Соберу понятную страницу, которую не стыдно отправить клиенту из Instagram.</p></div>
+          <div><span class="card-label">03 · сайт</span><h3>Клиент должен быстро понять, куда он попал.</h3><p>Сайт объясняет, кто вы, чем занимаетесь и что делать дальше — без лишнего шума.</p></div>
         </article>
       </div>
     </section>
 
 <section class="section wrap reveal" id="services">
   <div class="section-head compact-head">
-    <span class="section-kicker">что можно упростить</span>
-    <h2>Задачу приносите вы.<br><em>Решение собираю я.</em></h2>
+    <span class="section-kicker">что можно собрать вместе</span>
+    <h2>Задачу разбираем вместе.<br><em>Решение собираю я.</em></h2>
   </div>
 
   <div class="bento services-grid">
@@ -111,7 +203,7 @@
     <article class="card service service-main">
       <div class="service-top">
         <span class="service-number">01</span>
-        <span class="service-tag">общение</span>
+        <span class="service-tag">поддержка</span>
       </div>
 
 <div class="service-visual bot-ui" aria-hidden="true">
@@ -160,7 +252,7 @@
     <article class="card service service-small service-process">
       <div class="service-top">
         <span class="service-number">02</span>
-        <span class="service-tag">рутина</span>
+        <span class="service-tag">автоматизация</span>
       </div>
 
       <div class="process-visual" aria-hidden="true">
@@ -197,7 +289,7 @@
 <article class="card service service-small service-site">
   <div class="service-top">
     <span class="service-number">03</span>
-    <span class="service-tag">представление</span>
+    <span class="service-tag">сайт</span>
   </div>
 
   <div class="site-visual">
@@ -209,7 +301,7 @@
 
       <div class="site-preview-content">
         <strong>Услуги,<br>которые хочется выбрать.</strong>
-        <span>Понятно о вас, ваших услугах и том, как с вами связаться.</span>
+        <span>Понятно о вас и о ваших услугах</span>
 
         <div class="site-preview-button">
           Обсудить проект ↗
@@ -227,7 +319,7 @@
   <h3>Когда одного профиля мало</h3>
 
   <p>
-    Сделаю сайт или лендинг, который с первого экрана объясняет,
+    Соберём страницу, которая с первого экрана объясняет,
     кто вы, что предлагаете и как с вами связаться.
   </p>
 </article>
@@ -279,12 +371,12 @@
 
     <section class="section wrap reveal" id="process">
       <div class="process-card card">
-        <div class="process-intro"><span class="section-kicker">как работаем</span><h2>Без бюрократии.<br><em>По-человечески.</em></h2><p>Вы не обязаны разбираться в коде. Достаточно рассказать, что сейчас забирает время или мешает продавать.</p></div>
+        <div class="process-intro"><span class="section-kicker">как работаем</span><h2>Без бюрократии.<br><em>Вместе и понятно.</em></h2><p>Не нужно знать код или заранее придумывать решение. Вы рассказываете, что мешает или отнимает время — дальше разбираем это вместе и собираем подходящий вариант.</p></div>
         <div class="steps">
-          <div class="step"><span>01</span><div><h3>Обсуждаем</h3><p>Что бесит, где теряются заявки, что хочется упростить.</p></div></div>
-          <div class="step"><span>02</span><div><h3>Предлагаю решение</h3><p>Показываю, что автоматизируем и как это будет работать.</p></div></div>
-          <div class="step"><span>03</span><div><h3>Собираю</h3><p>Вы занимаетесь своими делами — я делаю продукт.</p></div></div>
-          <div class="step"><span>04</span><div><h3>Запускаем</h3><p>Передаю готовое решение и остаюсь на связи после запуска.</p></div></div>
+          <div class="step"><span>01</span><div><h3>Разбираем задачу</h3><p>Вы рассказываете, что отнимает время или где сейчас неудобно. Вместе отделяем проблему от лишнего.</p></div></div>
+          <div class="step"><span>02</span><div><h3>Находим вариант</h3><p>Я простыми словами объясняю, что можно автоматизировать и как это будет работать.</p></div></div>
+          <div class="step"><span>03</span><div><h3>Собираем</h3><p>Я делаю решение, а вы участвуете там, где это важно: проверяете, уточняете и направляете.</p></div></div>
+          <div class="step"><span>04</span><div><h3>Запускаем</h3><p>Проверяем результат, запускаем и остаёмся на связи, если понадобится что-то улучшить.</p></div></div>
         </div>
       </div>
     </section>
@@ -311,9 +403,9 @@
     </article>
 
     <article class="card proof proof-note">
-      <span class="card-label">без головной боли</span>
-      <strong>Вы ставите задачу</strong>
-      <p>Я разбираюсь в деталях, собираю решение и объясняю всё простыми словами.</p>
+      <span class="card-label">вместе с вами</span>
+      <strong>Разбираемся по ходу</strong>
+      <p>Я беру на себя техническую часть, а вы понимаете, что мы делаем, зачем и как это будет работать.</p>
     </article>
 
   </div>
@@ -321,7 +413,7 @@
 
     <section class="cta wrap reveal" id="contact">
       <div class="card cta-card glow-card">
-        <div><span class="section-kicker">есть задача?</span><h2>Давайте разберём её<br><em>без обязательств.</em></h2><p>Напишите, что сейчас отнимает время. Я скажу, что из этого можно автоматизировать и с чего начать.</p></div>
+        <div><span class="section-kicker">есть задача?</span><h2>Напишите, что сейчас<br><em>отнимает время.</em></h2><p>Разберёмся вместе: что из этого можно автоматизировать, с чего лучше начать и как это может упростить вашу работу.</p></div>
         <div class="cta-actions"><a class="button button-primary large" href="https://t.me/mhumbucker" target="_blank" rel="noreferrer">Написать в Telegram <span>↗</span></a><a class="social-link" href="https://github.com/MHumbucker" target="_blank" rel="noreferrer">GitHub ↗</a></div>
       </div>
     </section>
@@ -329,7 +421,7 @@
 
   <footer class="footer wrap">
     <span>© <span id="year"></span> MHumbucker</span>
-    <span>упрощаю работу и убираю рутину</span>
+    <span>собираю понятные решения вместе с вами</span>
     <a href="#top">наверх ↑</a>
   </footer>
 
